@@ -1,5 +1,4 @@
 function produceDrivingRange(range) {
-
   return function (start, end) {
     let dist = Math.abs(parseInt(start)-parseInt(end));
     if (dist <= range) {
@@ -8,5 +7,11 @@ function produceDrivingRange(range) {
     else {
       return `${dist-range} blocks out of range`;
     }
+  }
+}
+
+function produceTipCalculator(tipPercent) {
+  return function (total) {
+    return total*tipPercent;
   }
 }
